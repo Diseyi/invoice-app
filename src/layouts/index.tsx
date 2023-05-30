@@ -12,8 +12,8 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
 
     return (
-        <div className="flex flex-col lg:flex-row w-screen h-screen overflow-hidden ">
-            <div className="flex lg:flex-col justify-between bg-dark-blue-1 w-full lg:w-24 rounded-r-2x h-20 md:h-24 lg:h-full ">
+        <div className="flex flex-col lg:flex-row ">
+            <div className="flex lg:flex-col justify-between bg-gray-purple-2 w-full lg:w-24 lg:rounded-r-2xl h-20 md:h-24 lg:h-full sticky lg:fixed left-0 top-0">
                 <div className="bg-light-purple w-20 md:w-24 lg:w-full h-20 md:h-24 flex items-center justify-center rounded-r-2xl ">
                     <img src={logo} alt="invoice logo" className="" />
                 </div>
@@ -28,7 +28,7 @@ const Layout = ({ children }: LayoutProps) => {
                     </div>
                 </div>
             </div>
-            <div className="w-full bg-off-white dark:bg-dark-blue-2 h-full">
+            <div className="w-full h-full">
                 {children}
             </div>
         </div>
