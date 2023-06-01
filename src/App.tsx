@@ -3,8 +3,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Layout from './layouts';
 import InvoiceHome from './page/invoices/index';
-import InvoiceID from './page/invoices/id';
+import InvoiceDetail from './page/invoices/id';
 import ErrorPage from './error-page';
+import 'antd/dist/reset.css';
 
 const router = createBrowserRouter([
   {
@@ -14,14 +15,14 @@ const router = createBrowserRouter([
   },
   {
     path: "/invoice/:id",
-    element: <InvoiceID />
+    element: <InvoiceDetail />
   },
 ])
 
 
 function App() {
   return (
-    <div className='bg-off-white dark:bg-dark-blue '>
+    <div className='bg-off-white dark:bg-dark-blue'>
       <Layout >
           <RouterProvider router={router} />
       </Layout>

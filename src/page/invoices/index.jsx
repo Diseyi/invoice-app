@@ -5,6 +5,7 @@ import invoicedata from "../../data.json"
 import arrowdown from "../../assets/images/icon-arrow-down.svg";
 import plusicon from "../../assets/images/icon-plus.svg";
 import Invoice from "../../components/invoice-list";
+import ButtonIcon from '../../components/button/icon';
 
 const InvoiceHome = () => {
   const [invoiceData, setInvoiceData] = useState(invoicedata);
@@ -27,6 +28,7 @@ const InvoiceHome = () => {
             </div>
             <img src={arrowdown} alt="arrow down" className="" />
           </div>
+          {/* <ButtonIcon text */}
           <div role='button' className="bg-light-purple rounded-full flex p-2 gap-1 md:gap-2 items-center ">
             <div className="bg-white rounded-full w-8 h-8 flex items-center justify-center">
               <img src={plusicon} alt="" className="" />
@@ -42,7 +44,7 @@ const InvoiceHome = () => {
         <div className="flex flex-col gap-5 ">
           {
             invoiceData.map((item) => (
-              <Link  key={item.id} to={`invoice/${item.id}`} >
+              <Link key={item.id} to={`invoice/${item.id}`} >
                 <Invoice id={item.id} paymentDue={item.paymentDue} clientName={item.clientName} total={item.total} status={item.status} />
               </Link>
 

@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
 
     return (
         <div className="flex flex-col lg:flex-row ">
-            <div className="flex lg:flex-col justify-between bg-gray-purple-2 w-full lg:w-24 lg:rounded-r-2xl h-20 md:h-24 lg:h-full sticky lg:fixed left-0 top-0">
+            <div className="flex lg:flex-col justify-between bg-gray-purple-2 w-full lg:w-24 lg:rounded-r-2xl h-20 md:h-24 lg:h-screen sticky z-30 lg:fixed left-0 top-0">
                 <div className="bg-light-purple w-20 md:w-24 lg:w-full h-20 md:h-24 flex items-center justify-center rounded-r-2xl ">
                     <img src={logo} alt="invoice logo" className="" />
                 </div>

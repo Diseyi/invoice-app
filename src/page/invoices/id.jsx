@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
-import InvoiceItems from "../../components/invoice-items"
+import Button from "../../components/button";
+import ButtonIcon from "../../components/button/icon";
+import EditInvoice from "../../components/edit-invoice/";
+import InvoiceItems from "../../components/invoice-items";
 import invoicedata from "../../data.json";
 import leftarrow from "../../assets/images/icon-arrow-left.svg";
 
-const EditInvoice = () => {
+
+const InvoiceDetail = () => {
   const { id } = useParams()
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState([]);
+  const [open, setOpen] = useState(true);
+
 
   useEffect(() => {
     fetchData()
@@ -22,6 +28,15 @@ const EditInvoice = () => {
     console.log(idData);
   }
 
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
   if (loading) {
     return <div className="w-11/12 lg:w-7/12 m-auto py-12">Loading</div>
   }
@@ -31,10 +46,9 @@ const EditInvoice = () => {
     <div className="">
       <div className="w-11/12 lg:w-7/12 m-auto">
         <div className="py-12">
-          <button className="flex items-center gap-4">
-            <img src={leftarrow} alt="" className="" />
-            <span className="">Go Back</span>
-          </button>
+          <Link to="/">
+            <ButtonIcon src={leftarrow} text='Go Back' imgSize='w-2 h-3' />
+          </Link>
         </div>
         <div className="flex justify-between bg-white items-center px-6 py-8">
           <div className="flex w-full md:w-fit justify-between items-center gap-6 rounded">
@@ -43,9 +57,9 @@ const EditInvoice = () => {
               <span className={`w-2 h-2 rounded-full bg-orange ${data.status === 'pending' ? 'bg-dark-orange' : data.status === 'draft' ? 'bg-gray-purple-2' : 'bg-light-green'} `}></span> {data.status} </div>
           </div>
           <div className="hidden md:flex gap-3">
-            <button className="rounded-full py-4 px-8 border">Edit</button>
-            <button className="bg-light-red rounded-full py-4 px-8 text-white  ">Delete</button>
-            <button className="bg-light-purple rounded-full py-4 px-8 text-white ">Mark as Paid</button>
+            <Button onClick={handleClickOpen} color='text-black' bgColor='bg-gray-100' text='Edit' />
+            <Button color='text-white' bgColor='bg-light-red' text='Delete' />
+            <Button color='text-white' bgColor='bg-light-purple' text='Mark as Paid' />
           </div>
         </div>
 
@@ -95,12 +109,13 @@ const EditInvoice = () => {
         </div>
       </div>
       <div className="flex items-center justify-center md:hidden gap-3 bg-white py-5">
-        <button className="rounded-full py-4 px-6 border text-sm">Edit</button>
-        <button className="bg-light-red rounded-full py-4 px-6 text-white text-sm ">Delete</button>
-        <button className="bg-light-purple rounded-full py-4 px-6 text-white text-sm">Mark as Paid</button>
+        <Button onClick={handleClickOpen} color='text-white' bgColor='bg-gray-100' text='Edit' />
+        <Button color='text-white' bgColor='bg-light-red' text='Delete' />
+        <Button color='text-white' bgColor='bg-light-purple' text='Mark as Paid' />
       </div>
+      {/* <EditInvoice data={data} /> */}
     </div>
   )
 }
 
-export default EditInvoice
+export default InvoiceDetail
