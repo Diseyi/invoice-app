@@ -11,7 +11,7 @@ const InvoiceItems = (data: { items: ItemsProps[]; total:number; }) => {
 
     return (
         <div className=" mt-6">
-            <div className="px-5 py-8">
+            <div className=" px-5 py-8">
                 <div className="w-full py-4 hidden md:grid grid-cols-4">
                     <div className="">Item Name</div>
                     <div className="text-right">QTY.</div>
