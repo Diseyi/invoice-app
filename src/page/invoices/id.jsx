@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-import Button from "../../components/button";
-import ButtonIcon from "../../components/button/icon";
-import EditInvoice from "../../components/edit-invoice/";
-import InvoiceItems from "../../components/invoice-items";
+import Button from "../../components/shared/button";
+import ButtonIcon from "../../components/shared/button/icon";
+// import EditInvoice from "../../../components/edit-invoice/";
+import InvoiceItems from "../../components/features/invoice-items";
 import invoicedata from "../../data.json";
 import leftarrow from "../../assets/images/icon-arrow-left.svg";
 

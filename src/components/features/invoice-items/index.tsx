@@ -1,4 +1,3 @@
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from "react";
 
 interface ItemsProps {
     name: string;

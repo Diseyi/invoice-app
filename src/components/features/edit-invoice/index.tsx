@@ -1,13 +1,40 @@
 import leftarrow from "../../assets/images/icon-arrow-left.svg";
-import Modal from "../modal";
-import Button from "../button";
-import Input from "../input";
-import Select from "../select";
-import Label from "../label";
+import Modal from "../../shared/modal";
+import Button from "../../shared/button";
+import Input from "../../shared/input";
+import Select from "../../shared/select";
+import Label from "../../shared/label";
 
-// interface 
+interface Address {
+    street: string;
+    city: string;
+    postCode: string;
+    country: string;
+}
 
-const EditInvoice = ({ data }: any) => {
+interface Items {
+    name: string;
+    quantity: number;
+    price: number;
+    total: number;
+}
+
+interface EditInvoiceProps {
+    id: string;
+    createdAt: string;
+    paymentDue: string;
+    description: string;
+    paymentTerms: number;
+    clientName: string;
+    clientEmail: string;
+    status: string;
+    senderAddress: Address;
+    clientAddress: Address;
+    items: Items[],
+    total: number;
+  }
+
+const EditInvoice = (data : EditInvoiceProps) => {
 
     return (
         <Modal >

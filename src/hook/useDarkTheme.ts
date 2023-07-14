@@ -6,6 +6,8 @@ export default function useDarkTheme() {
 
     useEffect(() => {
         const root = window.document.documentElement;
+        console.log(root);
+        
         root.classList.remove(colorTheme);
         root.classList.add(theme);
 

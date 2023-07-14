@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import invoicedata from "../../data.json"
 import arrowdown from "../../assets/images/icon-arrow-down.svg";
 import plusicon from "../../assets/images/icon-plus.svg";
-import Invoice from "../../components/invoice-list";
-import ButtonIcon from '../../components/button/icon';
+import Invoice from "../../components/features/invoice-list";
+// import ButtonIcon from '../../components/button/icon';
 
 const InvoiceHome = () => {
   const [invoiceData, setInvoiceData] = useState(invoicedata);
