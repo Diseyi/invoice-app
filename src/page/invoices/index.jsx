@@ -5,6 +5,7 @@ import invoicedata from "../../data.json"
 import arrowdown from "../../assets/images/icon-arrow-down.svg";
 import plusicon from "../../assets/images/icon-plus.svg";
 import Invoice from "../../components/features/invoice-list";
+import { IHeader } from "../../components/shared/button";
 // import ButtonIcon from '../../components/button/icon';
 
 const InvoiceHome = () => {
@@ -14,7 +15,7 @@ const InvoiceHome = () => {
     <div className=" w-11/12  lg:w-7/12 m-auto">
       <header className="py-12 lg:py-20 flex justify-between items-center">
         <div className="">
-          <h1 className=" text-dark-blue dark:text-white text-2xl md:3xl lg:text-5xl font-bold">Invoices</h1>
+          <IHeader></IHeader>
           <div className="text-gray-purple dark:text-white text-sm">
             <span className=" hidden md:block  ">There are {invoiceData.length} total invoices</span>
             <span className=" md:hidden  ">{invoiceData.length} invoices</span>

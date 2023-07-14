@@ -53,7 +53,7 @@ const InvoiceDetail = () => {
         <div className="flex justify-between bg-white items-center px-6 py-8">
           <div className="flex w-full md:w-fit justify-between items-center gap-6 rounded">
             <div className="">Status</div>
-            <div className={`border w-24 p-2 flex items-center justify-center gap-2 capitalize rounded ${data.status === 'pending' ? 'text-dark-orange' : data.status === 'draft' ? 'text-gray-purple-2' : 'text-light-green'}`}>
+            <div className={` bg-green-200 w-24 p-2 flex items-center justify-center gap-2 capitalize rounded ${data.status === 'pending' ? 'text-dark-orange' : data.status === 'draft' ? 'text-gray-purple-2' : 'text-light-green'}`}>
               <span className={`w-2 h-2 rounded-full bg-orange ${data.status === 'pending' ? 'bg-dark-orange' : data.status === 'draft' ? 'bg-gray-purple-2' : 'bg-light-green'} `}></span> {data.status} </div>
           </div>
           <div className="hidden md:flex gap-3">

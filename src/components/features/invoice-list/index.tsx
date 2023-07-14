@@ -1,5 +1,6 @@
 
 import rightarrow from "../../../assets/images/icon-arrow-right.svg"
+import Button from "../../shared/button";
 
 interface InvoiceProps {
     id: string;
@@ -12,7 +13,7 @@ interface InvoiceProps {
 const Invoice = ({ id, paymentDue, clientName, total, status }: InvoiceProps) => {
     return (
         <div className="bg-white dark:bg-black-shade-2 border rounded-xl w-full">
-            <div className="hidden md:grid grid-cols-6 items-center  w-full px-5 py-4 ">
+            <Button text="Add Invoice"></Button><div className="hidden md:grid grid-cols-6 items-center  w-full px-5 py-4 ">
                 <div className=" text-left">
                     <span className="text-gray-purple dark:text-white">#</span>
                     <span className=""> {id} </span>
@@ -39,7 +40,7 @@ const Invoice = ({ id, paymentDue, clientName, total, status }: InvoiceProps) =>
                         <div className="text-left text-gray-purple text-xs"> Due {paymentDue} </div>
                         <div className="text-sm font-semibold"> $ {total} </div>
                     </div>
-                    <div className={`border w-24 p-2 flex items-center justify-center gap-2 capitalize rounded ${status === 'pending' ? 'text-dark-orange' : status === 'draft' ? 'text-gray-purple-2' : 'text-light-green'}`}>
+                    <div className={` w-24 p-2 flex items-center justify-center gap-2 capitalize rounded ${status === 'pending' ? 'text-dark-orange bg-orange-200' : status === 'draft' ? ' text-gray-purple-2' : 'text-light-green bg-green-200'}`}>
                         <span className={`w-2 h-2 rounded-full bg-orange ${status === 'pending' ? 'bg-dark-orange' : status === 'draft' ? 'bg-gray-purple-2' : 'bg-light-green'} `}></span> {status} </div>
                 </div>
             </div>
