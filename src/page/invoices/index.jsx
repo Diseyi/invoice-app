@@ -6,6 +6,7 @@ import arrowdown from "../../assets/images/icon-arrow-down.svg";
 import plusicon from "../../assets/images/icon-plus.svg";
 import Invoice from "../../components/features/invoice-list";
 import { IHeader } from "../../components/shared/button";
+import { WelcomeComponent } from "../../components/shared/label";
 // import ButtonIcon from '../../components/button/icon';
 
 const InvoiceHome = () => {
@@ -43,16 +44,12 @@ const InvoiceHome = () => {
         </div>
       </header>
       <main className=" h-full pb-10">
-        <div className="flex flex-col gap-5 ">
+        <WelcomeComponent></WelcomeComponent><div className="flex flex-col gap-5 ">
           {invoiceData.map(item => <Link key={item.id} to={`invoice/${item.id}`}>
-                <Invoice id={item.id} paymentDue={item.paymentDue} clientName={item.clientName} total={item.total} status={item.status} />
-              </Link>)}
+            <Invoice id={item.id} paymentDue={item.paymentDue} clientName={item.clientName} total={item.total} status={item.status} />
+          </Link>)}
         </div>
-      <div className="" style={{
-      color: "red",
-      padding: "10px",
-      fontSize: "40px"
-    }}> Welcome Tamara</div></main>
+      </main>
     </div>
   )
 }
