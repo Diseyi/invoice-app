@@ -13,7 +13,9 @@ const Button = ({text, bgColor = 'bg-gray-100', color = 'text-black', onclick}: 
 }
 ;
 export const IHeader = () => {
-  return <h1 className=" text-dark-blue dark:text-white text-2xl md:3xl lg:text-5xl font-bold">Invoices</h1>;
+  return <h1 className=" text-dark-blue dark:text-white text-2xl md:3xl lg:text-5xl font-bold" style={{
+  /*style placeholder*/
+}}>Invoices</h1>;
 };
 
 export default Button

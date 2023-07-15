@@ -13,6 +13,7 @@ const InvoiceHome = () => {
 
   return (
     <div className=" w-11/12  lg:w-7/12 m-auto">
+      
       <header className="py-12 lg:py-20 flex justify-between items-center">
         <div className="">
           <IHeader></IHeader>
@@ -29,7 +30,7 @@ const InvoiceHome = () => {
             </div>
             <img src={arrowdown} alt="arrow down" className="" />
           </div>
-          {/* <ButtonIcon text */}
+          {}
           <div role='button' className="bg-light-purple rounded-full flex p-2 gap-1 md:gap-2 items-center ">
             <div className="bg-white rounded-full w-8 h-8 flex items-center justify-center">
               <img src={plusicon} alt="" className="" />
@@ -43,16 +44,15 @@ const InvoiceHome = () => {
       </header>
       <main className=" h-full pb-10">
         <div className="flex flex-col gap-5 ">
-          {
-            invoiceData.map((item) => (
-              <Link key={item.id} to={`invoice/${item.id}`} >
+          {invoiceData.map(item => <Link key={item.id} to={`invoice/${item.id}`}>
                 <Invoice id={item.id} paymentDue={item.paymentDue} clientName={item.clientName} total={item.total} status={item.status} />
-              </Link>
-
-            ))
-          }
+              </Link>)}
         </div>
-      </main>
+      <div className="" style={{
+      color: "red",
+      padding: "10px",
+      fontSize: "40px"
+    }}> Welcome Tamara</div></main>
     </div>
   )
 }

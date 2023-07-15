@@ -18,12 +18,12 @@ const Layout = ({ children }: LayoutProps) => {
                     <img src={logo} alt="invoice logo" className="" />
                 </div>
                 <div className="flex lg:flex-col">
-                    <div className="w-20 md:w-24 lg:w-full h-20 md:h-24  flex items-center justify-center border-l lg:border-l-0 lg:border-t border-gray-purple">
-                        <img src={avatar} alt="avatar" className="rounded-full w-10 h-10 md:w-12 md:h-12" />
-                    </div><div className="">
+                    <div className="">
                         <div className="w-20 md:w-24 lg:w-full h-20 md:h-24 flex items-center justify-center ">
                             <ThemeSwitch />
                         </div>
+                    </div><div className="w-20 md:w-24 lg:w-full h-20 md:h-24  flex items-center justify-center border-l lg:border-l-0 lg:border-t border-gray-purple">
+                        <img src={avatar} alt="avatar" className="rounded-full w-10 h-10 md:w-12 md:h-12" />
                     </div></div>
             </div>
             <div className="w-full h-full">
