@@ -24,7 +24,7 @@ const InvoiceHome = () => {
           <div role='button' className="flex items-center gap-2">
             <div className="text-sm text-dark-blue dark:text-white font-semibold">
               <span className=" hidden md:block">Filter by status</span>
-              <span className="md:hidden ">Filter </span>
+              <span className="md:hidden ">Filters </span>
             </div>
             <img src={arrowdown} alt="arrow down" className="" />
           </div>
